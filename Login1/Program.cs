@@ -12,7 +12,7 @@ namespace Login1
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main()//Hello world
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
