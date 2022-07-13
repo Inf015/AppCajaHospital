@@ -1,6 +1,6 @@
 ﻿namespace Login1
 {
-    partial class frmFactura
+    partial class frmCierreDia
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFactura));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCierreDia));
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
@@ -41,16 +41,16 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // frmFactura
+            // frmCierreDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmFactura";
-            this.Text = "Factura";
-            this.Load += new System.EventHandler(this.frmFactura_Load);
+            this.Name = "frmCierreDia";
+            this.Text = "Cierre Diario";
+            this.Load += new System.EventHandler(this.frmCierreDia_Load);
             this.ResumeLayout(false);
 
         }

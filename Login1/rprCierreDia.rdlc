@@ -4,9 +4,9 @@
     <ReportItems>
       <Rectangle Name="Rectangle1">
         <KeepTogether>true</KeepTogether>
-        <Top>1.93641cm</Top>
-        <Left>0.97578cm</Left>
-        <Height>6.04542cm</Height>
+        <Top>0.635cm</Top>
+        <Left>0.9725cm</Left>
+        <Height>4.98709cm</Height>
         <Width>15.66271cm</Width>
         <Style>
           <Border>
@@ -30,29 +30,16 @@
         </Style>
       </Rectangle>
     </ReportItems>
-    <Height>4.6875in</Height>
+    <Height>2.38009in</Height>
     <Style />
   </Body>
-  <Width>7.16009in</Width>
+  <Width>6.93217in</Width>
   <Page>
     <PageHeader>
       <Height>2.90229cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Image Name="Image1">
-          <Source>Embedded</Source>
-          <Value>logo</Value>
-          <Sizing>FitProportional</Sizing>
-          <Left>0.44662cm</Left>
-          <Height>2.90229cm</Height>
-          <Width>2.92875cm</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </Image>
         <Textbox Name="ExecutionTime">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -71,10 +58,9 @@
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
           <Top>0.31432cm</Top>
-          <Left>15.26328cm</Left>
+          <Left>14.81666cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
-          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -85,16 +71,30 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox4">
+        <Image Name="Image1">
+          <Source>Embedded</Source>
+          <Value>logo</Value>
+          <Sizing>FitProportional</Sizing>
+          <Left>0.29104cm</Left>
+          <Height>2.90229cm</Height>
+          <Width>2.92875cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox3">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Factura Medica</Value>
+                  <Value>Reporte de Cierre Diario</Value>
                   <Style>
-                    <FontSize>22pt</FontSize>
+                    <FontSize>20pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <Color>White</Color>
                   </Style>
@@ -103,11 +103,11 @@
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>0.79057cm</Top>
-          <Left>5.94995cm</Left>
-          <Height>1.30033cm</Height>
-          <Width>6.15125cm</Width>
+          <rd:DefaultName>Textbox3</rd:DefaultName>
+          <Top>0.94932cm</Top>
+          <Left>4.89162cm</Left>
+          <Height>1.07625cm</Height>
+          <Width>8.85317cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -128,7 +128,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>6.61458cm</Height>
+      <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -149,8 +149,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>1.48662cm</Top>
-          <Left>15.26328cm</Left>
+          <Top>1.39333cm</Top>
+          <Left>14.81666cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
@@ -167,8 +167,8 @@
           <Source>Embedded</Source>
           <Value>ID5780248</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.37537cm</Top>
-          <Left>0.44662cm</Left>
+          <Top>0.28208cm</Top>
+          <Left>0.29104cm</Left>
           <Height>1.97583cm</Height>
           <Width>1.92333cm</Width>
           <ZIndex>1</ZIndex>
@@ -258,5 +258,5 @@ CAAAABhEAAAAwCACAAAABhEAAAAwiAAAAIBBBAAAAAwiAAAAYBABAAAAgwgAAAAYRAAAAMAgAgAAAAaV
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>60bccdbe-280e-4523-8ce2-f051b7ee2a56</rd:ReportID>
+  <rd:ReportID>aa2d884c-7940-4ab0-adbd-308bf5dddc18</rd:ReportID>
 </Report>

@@ -74,3 +74,4 @@ C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Deb
 C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.csproj.CopyComplete
 C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.exe
 C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.pdb
+C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.DatosFactura.resources
