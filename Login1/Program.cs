@@ -12,7 +12,7 @@ namespace Login1
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()//Hello world
+        static void Main()//Hello worlddddd test janca
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
