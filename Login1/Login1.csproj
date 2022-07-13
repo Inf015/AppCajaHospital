@@ -77,6 +77,12 @@
     <Compile Include="frmCierreDia.Designer.cs">
       <DependentUpon>frmCierreDia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCuadre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuadre.Designer.cs">
+      <DependentUpon>frmCuadre.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,12 @@
     <Compile Include="frmInicioDia.Designer.cs">
       <DependentUpon>frmInicioDia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVistaCuadre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVistaCuadre.Designer.cs">
+      <DependentUpon>frmVistaCuadre.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\ApplicationSetting.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,6 +117,9 @@
     <EmbeddedResource Include="frmCierreDia.resx">
       <DependentUpon>frmCierreDia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCuadre.resx">
+      <DependentUpon>frmCuadre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicioDia.resx">
       <DependentUpon>frmInicioDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVistaCuadre.resx">
+      <DependentUpon>frmVistaCuadre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

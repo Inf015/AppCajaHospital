@@ -66,7 +66,6 @@ C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\bin\Deb
 C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.csproj.AssemblyReference.cache
 C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.csproj.SuggestedBindingRedirects.cache
-C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.Form1.resources
 C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.frmFactura.resources
 C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.Properties.Resources.resources
 C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.csproj.GenerateResource.cache
@@ -74,7 +73,6 @@ C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Deb
 C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.csproj.CopyComplete
 C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.exe
 C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.pdb
-C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.DatosFactura.resources
 D:\FinalProjectDS3\Login1\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 D:\FinalProjectDS3\Login1\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 D:\FinalProjectDS3\Login1\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -143,3 +141,9 @@ D:\FinalProjectDS3\Login1\obj\Debug\Login1.csproj.CoreCompileInputs.cache
 D:\FinalProjectDS3\Login1\obj\Debug\Login1.csproj.CopyComplete
 D:\FinalProjectDS3\Login1\obj\Debug\Login1.exe
 D:\FinalProjectDS3\Login1\obj\Debug\Login1.pdb
+C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.Facturacion.resources
+C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.frmCierreDia.resources
+C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.frmLogin.resources
+C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.frmInicioDia.resources
+C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.frmCuadre.resources
+C:\Users\olive\OneDrive - INTEC\Documentos\GitHub\AppCajaHospital\Login1\obj\Debug\Login1.frmVistaCuadre.resources

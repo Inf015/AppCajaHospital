@@ -21,5 +21,35 @@ namespace Login1
         {
 
         }
+
+        private void btlFacturar_Click(object sender, EventArgs e)
+        {
+            frmFactura impFactura = new frmFactura();
+            impFactura.Show();
+        }
+
+        private void inicioDiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInicioDia frmInicioDia = new frmInicioDia();
+            frmInicioDia.Show();
+        }
+
+        private void cierreDiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCierreDia frmCierreDia = new frmCierreDia();
+            frmCierreDia.Show();
+        }
+
+        private void cuadreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCuadre frmCuadre = new frmCuadre();
+            frmCuadre.Show();
+            
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

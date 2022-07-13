@@ -52,7 +52,8 @@ namespace Login1
 
                         if (sdr.Read())
                         {
-                            MessageBox.Show("Bienvenido");
+                            Facturacion facturacion = new Facturacion();
+                            facturacion.Show();
                         }
                         else
                         {

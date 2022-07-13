@@ -43,9 +43,13 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtServicio = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -87,22 +91,29 @@
             this.inicioDiaToolStripMenuItem.Name = "inicioDiaToolStripMenuItem";
             this.inicioDiaToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.inicioDiaToolStripMenuItem.Text = "Inicio dia";
+            this.inicioDiaToolStripMenuItem.Click += new System.EventHandler(this.inicioDiaToolStripMenuItem_Click);
             // 
             // cierreDiaToolStripMenuItem
             // 
             this.cierreDiaToolStripMenuItem.Name = "cierreDiaToolStripMenuItem";
             this.cierreDiaToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.cierreDiaToolStripMenuItem.Text = "Cierre dia";
+            this.cierreDiaToolStripMenuItem.Click += new System.EventHandler(this.cierreDiaToolStripMenuItem_Click);
             // 
             // cuadreToolStripMenuItem
             // 
             this.cuadreToolStripMenuItem.Name = "cuadreToolStripMenuItem";
             this.cuadreToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.cuadreToolStripMenuItem.Text = "Cuadres";
+            this.cuadreToolStripMenuItem.Click += new System.EventHandler(this.cuadreToolStripMenuItem_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.GhostWhite;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btlGuardar);
             this.panel1.Controls.Add(this.btlFacturar);
@@ -145,6 +156,7 @@
             this.btlFacturar.TabIndex = 7;
             this.btlFacturar.Text = "Facturar";
             this.btlFacturar.UseVisualStyleBackColor = true;
+            this.btlFacturar.Click += new System.EventHandler(this.btlFacturar_Click);
             // 
             // label3
             // 
@@ -181,16 +193,6 @@
             this.textBox2.Size = new System.Drawing.Size(166, 20);
             this.textBox2.TabIndex = 3;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 127);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -207,6 +209,52 @@
             this.txtServicio.Name = "txtServicio";
             this.txtServicio.Size = new System.Drawing.Size(166, 20);
             this.txtServicio.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(305, 111);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(143, 21);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Metodo de Pago";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, -12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(143, 127);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(309, 134);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(166, 21);
+            this.comboBox1.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(305, 163);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 21);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Tax";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(309, 187);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(166, 20);
+            this.textBox1.TabIndex = 12;
             // 
             // Facturacion
             // 
@@ -251,5 +299,9 @@
         private System.Windows.Forms.ToolStripMenuItem cierreDiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuadreToolStripMenuItem;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
