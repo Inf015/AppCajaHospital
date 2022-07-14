@@ -126,8 +126,10 @@ namespace Login1
         private void btlGuardar_Click(object sender, EventArgs e)
         {
             QueriesTableAdapter adapter = new QueriesTableAdapter();
-            
-            adapter.InsertFactura(Descripcion,Precio,servicio,Precio,Precio*Tax,Tax,DateTime.Now,Precio*Tax,Metodo);
+
+            double total = (Precio * Tax) + Precio;
+
+            adapter.InsertFactura(Descripcion,Precio,servicio,Precio,total,Tax,DateTime.Now,Metodo);
             MessageBox.Show("Guardado");
 
             //=======
