@@ -110,7 +110,17 @@ SELECT ID_factura, Descripcion, Precio, Articulo, SubTotal, Total, Tax, Fecha, P
               <Mapping SourceColumn="PrecioTotal" DataSetColumn="PrecioTotal" />
               <Mapping SourceColumn="ID_MetodoPago" DataSetColumn="ID_MetodoPago" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="CajaHospitalConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="SumaPrecio" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="SumaPrecio" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SumaPrecio">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(Total) AS Expr1
+FROM            Factura</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MetodoPagoTableAdapter" GeneratorDataComponentClassName="MetodoPagoTableAdapter" Name="MetodoPago" UserDataComponentName="MetodoPagoTableAdapter">
             <MainSource>

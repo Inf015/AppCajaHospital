@@ -18,9 +18,12 @@ namespace Login1
     {
 
         string servicio, Descripcion;
-        double Tax, Precio;
+        double Tax, Precio, Total, PrecioTotal;
         int Metodo;
-
+        public class capPrecio
+        {
+            public double Preciototal { get; set; }
+        }
         public Facturacion()
         {
             InitializeComponent();
@@ -125,36 +128,27 @@ namespace Login1
 
         private void btlGuardar_Click(object sender, EventArgs e)
         {
+            Total = (Precio * Tax) + Precio;
+
             QueriesTableAdapter adapter = new QueriesTableAdapter();
+            FacturaTableAdapter adapter1 = new FacturaTableAdapter();
 
-            double total = (Precio * Tax) + Precio;
 
-            adapter.InsertFactura(Descripcion,Precio,servicio,Precio,total,Tax,DateTime.Now,Metodo);
+            adapter.InsertFactura(Descripcion, Precio, servicio, Precio, Total, Tax, DateTime.Now, Metodo);
+            PrecioTotal = adapter1.SumaPrecio(capPrecio);
+            //INVENTO
+            //query = "SELECT SUM(Total) AS Expr1 FROM Factura";
+            //SqlCommand command = new SqlCommand(query);
+            //SqlDataAdapter data = new SqlDataAdapter(command);
+            //DataTable table = new DataTable();
+            //data.Fill(table);
+
+
+            //PrecioTotal = adapter1.FillBy(test);
+
+            adapter.InsertPreciototal(PrecioTotal);
             MessageBox.Show("Guardado");
 
-            //=======
-            //        private void btlGuardar_Click(object sender, EventArgs e)
-            //        {
-
-            //            //using (SqlConnection con = new SqlConnection(ApplicationSetting.ConnectionString()))
-            //            //{
-            //            //    using (SqlCommand cmd = new SqlCommand("InsertFactura", con))
-            //            //    {
-            //            //        con.Open();
-
-            //            //        cmd.CommandType = CommandType.StoredProcedure;
-
-            //            //        cmd.Parameters.AddWithValue("@Descripcion", txtDescripcion.Text.Trim());
-            //            //        cmd.Parameters.AddWithValue("@Precio", float.Parse(txtPrecio.Text.Trim()));
-            //            //        cmd.Parameters.AddWithValue("@Articulo", txtServicio.Text.Trim());
-            //            //        cmd.Parameters.AddWithValue("@Tax", float.Parse(txtTax.Text.Trim()));
-
-            //            //        cmd.ExecuteNonQuery();
-
-            //            //        con.Close();
-            //            //        MessageBox.Show("La informacion se guardo correctamente");
-
-            //            //    }
         }
     }
 
