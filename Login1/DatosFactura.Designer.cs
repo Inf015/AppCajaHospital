@@ -206,6 +206,7 @@
             this.btlGuardar.Text = "Guardar";
             this.btlGuardar.UseVisualStyleBackColor = true;
             this.btlGuardar.Click += new System.EventHandler(this.btlGuardar_Click);
+
             // 
             // btlFacturar
             // 

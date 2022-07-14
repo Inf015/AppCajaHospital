@@ -64,9 +64,8 @@ namespace Login1
 
         private void cuadreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCuadre frmCuadre = new frmCuadre();
-            frmCuadre.Show();
-            
+            frmVistaCuadre frmVistaCuadre = new frmVistaCuadre();
+            frmVistaCuadre.Show();
         }
 
         private void txtPrecio_TextChanged(object sender, EventArgs e)
@@ -135,7 +134,9 @@ namespace Login1
 
 
             adapter.InsertFactura(Descripcion, Precio, servicio, Precio, Total, Tax, DateTime.Now, Metodo);
-            PrecioTotal = adapter1.SumaPrecio(capPrecio);
+
+            //PrecioTotal = adapter1.SumaPrecio(capPrecio);
+           
             //INVENTO
             //query = "SELECT SUM(Total) AS Expr1 FROM Factura";
             //SqlCommand command = new SqlCommand(query);
