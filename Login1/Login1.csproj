@@ -147,10 +147,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rprCuadre.rdlc" />
     <EmbeddedResource Include="rprFactura.rdlc" />
     <EmbeddedResource Include="rprCierreDia.rdlc" />
     <EmbeddedResource Include="rprInicioDia.rdlc" />
-    <None Include="App1.config" />
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>

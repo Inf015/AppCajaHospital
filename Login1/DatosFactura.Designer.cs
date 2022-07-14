@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Facturacion));
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -36,9 +37,9 @@
             this.cierreDiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuadreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTax = new System.Windows.Forms.TextBox();
-            this.txtMetodoPago = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btlGuardar = new System.Windows.Forms.Button();
@@ -50,10 +51,24 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtServicio = new System.Windows.Forms.TextBox();
+            this.fKFacturaIDMeto30F848EDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fKFacturaIDMeto30F848EDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.metodoPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new Login1.DataSet1();
+            this.metodoPagoTableAdapter = new Login1.DataSet1TableAdapters.MetodoPagoTableAdapter();
+            this.facturaTableAdapter = new Login1.DataSet1TableAdapters.FacturaTableAdapter();
+            this.metodoPagoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.metodoPagoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKFacturaIDMeto30F848EDBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKFacturaIDMeto30F848EDBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metodoPagoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metodoPagoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metodoPagoBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -110,9 +125,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.GhostWhite;
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtTax);
-            this.panel1.Controls.Add(this.txtMetodoPago);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btlGuardar);
@@ -128,7 +143,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(793, 438);
             this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Efectivo",
+            "Transferencia",
+            "Tarjeta"});
+            this.comboBox1.Location = new System.Drawing.Point(309, 135);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(166, 21);
+            this.comboBox1.TabIndex = 14;
+            this.comboBox1.Tag = "Efectivo";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // label6
             // 
@@ -146,15 +174,7 @@
             this.txtTax.Name = "txtTax";
             this.txtTax.Size = new System.Drawing.Size(166, 20);
             this.txtTax.TabIndex = 12;
-            // 
-            // txtMetodoPago
-            // 
-            this.txtMetodoPago.FormattingEnabled = true;
-            this.txtMetodoPago.Location = new System.Drawing.Point(309, 134);
-            this.txtMetodoPago.Name = "txtMetodoPago";
-            this.txtMetodoPago.Size = new System.Drawing.Size(166, 21);
-            this.txtMetodoPago.TabIndex = 11;
-            this.txtMetodoPago.SelectedIndexChanged += new System.EventHandler(this.txtMetodoPago_SelectedIndexChanged);
+            this.txtTax.TextChanged += new System.EventHandler(this.txtTax_TextChanged);
             // 
             // label5
             // 
@@ -214,6 +234,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(479, 156);
             this.txtDescripcion.TabIndex = 5;
+            this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
             // label2
             // 
@@ -231,6 +252,7 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(166, 20);
             this.txtPrecio.TabIndex = 3;
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
             // pictureBox1
             // 
@@ -258,6 +280,45 @@
             this.txtServicio.Name = "txtServicio";
             this.txtServicio.Size = new System.Drawing.Size(166, 20);
             this.txtServicio.TabIndex = 0;
+            this.txtServicio.TextChanged += new System.EventHandler(this.txtServicio_TextChanged);
+            // 
+            // fKFacturaIDMeto30F848EDBindingSource
+            // 
+            this.fKFacturaIDMeto30F848EDBindingSource.DataMember = "FK__Factura__ID_Meto__30F848ED";
+            this.fKFacturaIDMeto30F848EDBindingSource.DataSource = this.metodoPagoBindingSource;
+            // 
+            // fKFacturaIDMeto30F848EDBindingSource1
+            // 
+            this.fKFacturaIDMeto30F848EDBindingSource1.DataMember = "FK__Factura__ID_Meto__30F848ED";
+            this.fKFacturaIDMeto30F848EDBindingSource1.DataSource = this.metodoPagoBindingSource;
+            // 
+            // metodoPagoBindingSource
+            // 
+            this.metodoPagoBindingSource.DataMember = "MetodoPago";
+            this.metodoPagoBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // metodoPagoTableAdapter
+            // 
+            this.metodoPagoTableAdapter.ClearBeforeFill = true;
+            // 
+            // facturaTableAdapter
+            // 
+            this.facturaTableAdapter.ClearBeforeFill = true;
+            // 
+            // metodoPagoBindingSource1
+            // 
+            this.metodoPagoBindingSource1.DataMember = "MetodoPago";
+            this.metodoPagoBindingSource1.DataSource = this.dataSet1;
+            // 
+            // metodoPagoBindingSource2
+            // 
+            this.metodoPagoBindingSource2.DataMember = "MetodoPago";
+            this.metodoPagoBindingSource2.DataSource = this.dataSet1;
             // 
             // Facturacion
             // 
@@ -279,6 +340,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKFacturaIDMeto30F848EDBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKFacturaIDMeto30F848EDBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metodoPagoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metodoPagoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metodoPagoBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -305,6 +372,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTax;
-        private System.Windows.Forms.ComboBox txtMetodoPago;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource metodoPagoBindingSource;
+        private DataSet1TableAdapters.MetodoPagoTableAdapter metodoPagoTableAdapter;
+        private System.Windows.Forms.BindingSource fKFacturaIDMeto30F848EDBindingSource;
+        private DataSet1TableAdapters.FacturaTableAdapter facturaTableAdapter;
+        private System.Windows.Forms.BindingSource metodoPagoBindingSource1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource metodoPagoBindingSource2;
+        private System.Windows.Forms.BindingSource fKFacturaIDMeto30F848EDBindingSource1;
     }
 }
