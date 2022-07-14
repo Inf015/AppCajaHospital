@@ -54,6 +54,7 @@ namespace Login1
                         {
                             Facturacion facturacion = new Facturacion();
                             facturacion.Show();
+                            Close();
                         }
                         else
                         {
