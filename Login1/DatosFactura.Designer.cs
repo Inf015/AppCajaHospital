@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Facturacion));
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -39,9 +38,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTax = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.metodoPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new Login1.DataSet1();
+            this.txtMetodoPago = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btlGuardar = new System.Windows.Forms.Button();
@@ -53,12 +50,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtServicio = new System.Windows.Forms.TextBox();
-            this.metodoPagoTableAdapter = new Login1.DataSet1TableAdapters.MetodoPagoTableAdapter();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metodoPagoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,7 +112,7 @@
             this.panel1.BackColor = System.Drawing.Color.GhostWhite;
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtTax);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.txtMetodoPago);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btlGuardar);
@@ -134,6 +128,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(793, 438);
             this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
@@ -151,30 +146,15 @@
             this.txtTax.Name = "txtTax";
             this.txtTax.Size = new System.Drawing.Size(166, 20);
             this.txtTax.TabIndex = 12;
-            this.txtTax.TextChanged += new System.EventHandler(this.txtTax_TextChanged);
             // 
-            // comboBox1
+            // txtMetodoPago
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.metodoPagoBindingSource, "Tipo", true));
-            this.comboBox1.DataSource = this.metodoPagoBindingSource;
-            this.comboBox1.DisplayMember = "Tipo";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(309, 134);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(166, 21);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.ValueMember = "ID_MetodoPago";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // metodoPagoBindingSource
-            // 
-            this.metodoPagoBindingSource.DataMember = "MetodoPago";
-            this.metodoPagoBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.txtMetodoPago.FormattingEnabled = true;
+            this.txtMetodoPago.Location = new System.Drawing.Point(309, 134);
+            this.txtMetodoPago.Name = "txtMetodoPago";
+            this.txtMetodoPago.Size = new System.Drawing.Size(166, 21);
+            this.txtMetodoPago.TabIndex = 11;
+            this.txtMetodoPago.SelectedIndexChanged += new System.EventHandler(this.txtMetodoPago_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -234,7 +214,6 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(479, 156);
             this.txtDescripcion.TabIndex = 5;
-            this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
             // label2
             // 
@@ -252,7 +231,6 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(166, 20);
             this.txtPrecio.TabIndex = 3;
-            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
             // pictureBox1
             // 
@@ -280,11 +258,6 @@
             this.txtServicio.Name = "txtServicio";
             this.txtServicio.Size = new System.Drawing.Size(166, 20);
             this.txtServicio.TabIndex = 0;
-            this.txtServicio.TextChanged += new System.EventHandler(this.txtServicio_TextChanged);
-            // 
-            // metodoPagoTableAdapter
-            // 
-            this.metodoPagoTableAdapter.ClearBeforeFill = true;
             // 
             // Facturacion
             // 
@@ -305,8 +278,6 @@
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metodoPagoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -334,9 +305,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTax;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private DataSet1 dataSet1;
-        private System.Windows.Forms.BindingSource metodoPagoBindingSource;
-        private DataSet1TableAdapters.MetodoPagoTableAdapter metodoPagoTableAdapter;
+        private System.Windows.Forms.ComboBox txtMetodoPago;
     }
 }

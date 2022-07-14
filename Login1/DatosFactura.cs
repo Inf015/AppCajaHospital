@@ -1,33 +1,30 @@
-﻿using Login1.DataSet1TableAdapters;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+using Login1.General;
 
 namespace Login1
 {
-    
     public partial class Facturacion : Form
     {
-        string servicio, Descripcion;
-        double Tax, Precio;
-        int Metodo;
+
         public Facturacion()
         {
             InitializeComponent();
+
         }
 
         private void DatosFactura_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet1.MetodoPago' table. You can move, or remove it, as needed.
-            this.metodoPagoTableAdapter.Fill(this.dataSet1.MetodoPago);
-
+            txtMetodoPago.Items.Add("Efectivo");
+            txtMetodoPago.Items.Add("Tarejta");
         }
 
         private void btlFacturar_Click(object sender, EventArgs e)
@@ -55,43 +52,43 @@ namespace Login1
             
         }
 
-        private void txtPrecio_TextChanged(object sender, EventArgs e)
-        {
-            Precio = double.Parse(txtPrecio.Text);
-        }
-
-        private void txtTax_TextChanged(object sender, EventArgs e)
-        {
-            Tax = double.Parse(txtTax.Text);
-        }
-
-        private void txtDescripcion_TextChanged(object sender, EventArgs e)
-        {
-            Descripcion = txtDescripcion.Text;
-        }
-
         private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Metodo = int.Parse(comboBox1.Text);
-        }
-
-        private void txtServicio_TextChanged(object sender, EventArgs e)
-        {
-            servicio = txtServicio.Text;
-        }
-
         private void btlGuardar_Click(object sender, EventArgs e)
         {
-            QueriesTableAdapter adapter = new QueriesTableAdapter();
-            adapter.InsertFactura(Descripcion,Precio,servicio,Precio,Precio*Tax,Tax,DateTime.Now,Precio*Tax);
-            adapter.ppinserMetodo(Metodo);
-            MessageBox.Show("Guardado");
-            
+            using (SqlConnection con = new SqlConnection(ApplicationSetting.ConnectionString()))
+            {
+                using (SqlCommand cmd = new SqlCommand("InsertFactura", con))
+                {
+                    con.Open();
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                   
+                    cmd.Parameters.AddWithValue("@Descripcion", txtDescripcion.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Precio", float.Parse(txtPrecio.Text.Trim()));
+                    cmd.Parameters.AddWithValue("@Articulo", txtServicio.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Tax", float.Parse(txtTax.Text.Trim()));
+
+                    cmd.ExecuteNonQuery();
+
+                    con.Close();
+                    MessageBox.Show("La informacion se guardo correctamente");
+                    
+                }
+            }
+        }
+
+        private void txtMetodoPago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
